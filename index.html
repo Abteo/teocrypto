@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Decrypto Simulator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="engine.js"></script>
+</head>
+<body>
+	<div class="content">
+      <h1 class="text_shadows">TEOCRYPTO</h1>
+	  <button id="start">START</button>
+	</div>
+  <div id="container">
+    <div id="words" style="margin-bottom:50px">
+      <h2>Le tue parole</h2>
+      <ul id="random-words"></ul>
+    </div>
+<div class="tab" style="display: inline-block; vertical-align: top;">
+<h2>Tue Combinazioni</h2>
+  <table id="yourTable" style="margin-right: 20px;">
+    <thead>
+    <tr>
+      <th>Parola</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+    </tr>
+  </thead>
+    <tbody>
+      <!-- Righe vengono generate dinamicamente -->
+    </tbody>
+  </table>
+  <button id="okButtonYourTable">Ok</button>
+</div>
+<div class="tab" style="display: inline-block; vertical-align: top;">
+<h2>Combinazioni Avversarie</h2>
+  <table id="opponentTable">
+        <thead>
+    <tr>
+      <th>Parola</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+    </tr>
+  </thead>
+    <tbody>
+      <!-- Righe vengono generate dinamicamente -->
+    </tbody>
+  </table>
+    <button id="okButtonOpponentTable">Ok</button>
+</div>
+<div id="cont" style="display: inline-block; vertical-align: top;">
+<h2>Dati alla mano</h2>
+<table id="ipotesiTable">
+  <thead>
+    <tr>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Qui verranno inserite le righe dinamicamente -->
+  </tbody>
+</table>
+<button id="insertButton">Inserisci</button>
+<table border="1" style="margin-top:50px">
+  <tr>
+    <td><input type="text" name="col1"></td>
+    <td><input type="text" name="col2"></td>
+    <td><input type="text" name="col3"></td>
+    <td><input type="text" name="col4"></td>
+  </tr>
+</table>
+</div>
+  </div>
+  	<button id="reset">&#8634;</button>
+</body>
+</html>

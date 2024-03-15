@@ -1,0 +1,172 @@
+#container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  display: none;
+  text-align: center;
+}
+
+.tab {
+  border: 1px solid black;
+  padding: 10px;
+  margin-right: 10px; /* Spazio tra i div */
+}
+
+ul {
+  list-style-type: none;
+}
+
+table {
+    border-collapse: collapse;
+    margin-bottom: 20px;
+	width: 100%;
+  }
+  th, td {
+    border: 1px solid black;
+    padding: 5px;
+  }
+  input[type="text"] {
+    width: 100px;
+  }
+  .error {
+    border: 2px solid red;
+  }
+  
+#words {
+  text-align: center;
+}
+
+#random-words {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+#random-words li {
+  display: inline;
+  margin-right: 10px;
+}  
+  
+#reset {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #ff4d4d; /* Rosso */
+  color: white;
+  font-size: px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s; /* Aggiunto box-shadow */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Aggiunta ombra */
+}
+
+#reset:hover {
+  animation: rotateCoin 1s infinite linear;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5); /* Ombra più intensa al passaggio del mouse */
+}
+
+@keyframes rotateCoin {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  text-align: center;
+  margin-top: 50px;
+}
+
+h1 {
+  font-size: 48px;
+  color: #3cb4ff; /* Blu */
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #3cb4ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #1e88e5; /* Blu più scuro al passaggio del mouse */
+}
+
+.table-container {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.table-container table {
+  border-collapse: collapse;
+  margin: 0 10px;
+}
+
+.table-container th, .table-container td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.table-container h2 {
+  font-size: 24px;
+  color: #3cb4ff;
+}
+
+#ipotesiTable {
+  margin-top: 20px;
+}
+
+td{
+  padding:15px;
+}
+
+/* Media query per dispositivi con larghezza massima di 600px */
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  #container {
+    padding: 10px;
+  }
+
+  .tab {
+	margin-top:20px;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .tab table {
+    margin-right: 0;
+  }
+}
+
+#header {
+  text-align: center;
+}
+
+p {
+  font-size: 24px;
+  color: #333;
+}
