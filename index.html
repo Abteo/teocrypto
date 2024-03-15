@@ -3,23 +3,72 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Decrypto Simulator</title>
+  <title>Teocrypto</title>
   <link rel="stylesheet" href="style.css">
   <script src="engine.js"></script>
 </head>
 <body>
+<nav>
+      <div class="navbar">
+	  <div id="overlay"></div>
+
+    <div id="popup">
+        <div class="popup-content">
+            <!-- Inserisci qui il contenuto delle regole di Decrypto -->
+            <p>Teocrypto è un gioco di deduzione e comunicazione, in cui i giocatori si dividono in due squadre e cercano di decifrare i messaggi cifrati degli avversari mentre proteggono i propri.</p>
+
+<p><b>Setup:</b> Ogni squadra deve sceglier tra i componenti il Crittografo della squadra. La persona designata a questo scopo sarà il Crittografo fino alla fine della partita e dovrà aprire la pagina Crittografo dal menù sul proprio dispositivo.</p>
+
+<p><b>Start:</b> Per iniziare è necessario premere il tasto Start (DAVVEROOH??). Consecutivamente ad ogni squadra verranno assegnate quattro parole associate ad un numero da 1 a 4, il tutto visibile nella sezione "Le tue Paorle" (NON TE LO ASPETTAVI VERO??). Questi numeri saranno quindi usati per assegnare significati ai codici generati sulla plancia del Crittografo.</p>
+
+<p><b>Round di gioco:</b> Durante ogni round, i Crittografi andranno a generare segretamente una combinazione di tre numeri e avranno l'importantissimo compito di inviare segnali alla propria squadra facendo in modo da far capire quali parole corrispondono agli indizi inviati.
+
+Bene, a questo punto non vi resta che segnare IN ORDINE gli indizi inviati dal Crittografo nella tabella "Tue Combinazioni" e a fianco ad ogni parola spuntare il numero che pensate sia relativo all'inidzio (facendo sempre riferimento alle "tue Parole". Quando finito premere OK (OK???)
+
+Arrivati a questo punto la squadra avversaria cercherà di indovinare la vostra combinazione e solo dopo che gli avversari si pronunciano, la squadra dovrà verificare anch'essa la correttezza del proprio codice.
+
+Nel round dell'avversario userete invece la tabella "Combinazioni Avversarie" (E DATTE NA SVEJA!).
+
+Riportate infine gli indizi dettati dal crittografo avversario nella tabella "Dati alla mano" e per l'amor del Signore, nella colonna corretta.
+
+L'ultima tabella serve per appuntare eventuali ipotesi.</p> 
+
+<p><b>Fine del gioco</b> Il gioco termina in due modi: la tua squadra è agli sgoccioli e sbaglia DUE volte la propria combinazione oppure la tua squadra è veramente competitiva e indovina DUE volte la combinazione della squadra avversaria.</p>
+
+<p>Teocrypto richiede una buona comunicazione, deduzione e capacità di pensare in modo strategico per vincere. Spero che queste regole ti siano utili per giocare!</p>
+            <!-- Aggiungi qui il testo delle regole -->
+        </div>
+    </div>
+        <div class="containers nav-container">
+            <input class="checkbox" type="checkbox" name="" id="" />
+            <div class="hamburger-lines">
+              <span class="line line1"></span>
+              <span class="line line2"></span>
+              <span class="line line3"></span>
+            </div>  
+          <div class="logo">
+            <h1 class="text_shadows">TEOCRYPTO</h1>
+          </div>
+          <div class="menu-items">
+            <li><button id="reset">&#8634;</button></li>
+            <li><a id="showPopup">Regole</a></li>
+            <li><a href="secret_code.html">Crittografo</a></li>
+          </div>
+        </div>
+      </div>
+    </nav>
 	<div class="content">
-      <h1 class="text_shadows">TEOCRYPTO</h1>
 	  <button id="start">START</button>
 	</div>
   <div id="container">
-    <div id="words" style="margin-bottom:50px">
+    <div id="words" style="margin-bottom:20px">
       <h2>Le tue parole</h2>
       <ul id="random-words"></ul>
     </div>
+<div id="game">
 <div class="tab" style="display: inline-block; vertical-align: top;">
 <h2>Tue Combinazioni</h2>
-  <table id="yourTable" style="margin-right: 20px;">
+  <table id="yourTable" style="margin-top: 20px;">
     <thead>
     <tr>
       <th>Parola</th>
@@ -37,7 +86,7 @@
 </div>
 <div class="tab" style="display: inline-block; vertical-align: top;">
 <h2>Combinazioni Avversarie</h2>
-  <table id="opponentTable">
+  <table id="opponentTable" style="margin-top: 20px;">
         <thead>
     <tr>
       <th>Parola</th>
@@ -52,6 +101,7 @@
     </tbody>
   </table>
     <button id="okButtonOpponentTable">Ok</button>
+</div>
 </div>
 <div id="cont" style="display: inline-block; vertical-align: top;">
 <h2>Dati alla mano</h2>
@@ -69,7 +119,7 @@
   </tbody>
 </table>
 <button id="insertButton">Inserisci</button>
-<table border="1" style="margin-top:50px">
+<table border="1" style="margin-top:20px">
   <tr>
     <td><input type="text" name="col1"></td>
     <td><input type="text" name="col2"></td>
@@ -79,6 +129,5 @@
 </table>
 </div>
   </div>
-  	<button id="reset">&#8634;</button>
 </body>
 </html>

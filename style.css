@@ -1,5 +1,5 @@
 #container {
-  max-width: 800px;
+  max-width: 80%;
   margin: 0 auto;
   padding: 20px;
   display: none;
@@ -10,6 +10,14 @@
   border: 1px solid black;
   padding: 10px;
   margin-right: 10px; /* Spazio tra i div */
+  flex: 1;
+}
+
+#game {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 ul {
@@ -19,7 +27,7 @@ ul {
 table {
     border-collapse: collapse;
     margin-bottom: 20px;
-	width: 100%;
+    width: 100%;
   }
   th, td {
     border: 1px solid black;
@@ -38,7 +46,7 @@ table {
 
 #random-words {
   display: inline-block;
-  margin: 0;
+  margin-top:20px;
   padding: 0;
 }
 
@@ -56,7 +64,7 @@ table {
   border-radius: 50%;
   background-color: #ff4d4d; /* Rosso */
   color: white;
-  font-size: px;
+  font-size: 16px;
   border: none;
   cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s; /* Aggiunto box-shadow */
@@ -86,7 +94,13 @@ body {
 
 .content {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 20px;
+}
+
+#cont {
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
 }
 
 h1 {
@@ -116,11 +130,13 @@ button:hover {
   display: flex;
   justify-content: center;
   margin-top: 20px;
+  overflow-x: auto;
 }
 
 .table-container table {
   border-collapse: collapse;
   margin: 0 10px;
+  max-width: 100%;
 }
 
 .table-container th, .table-container td {
@@ -137,8 +153,8 @@ button:hover {
   margin-top: 20px;
 }
 
-td{
-  padding:15px;
+td {
+  padding: 15px;
 }
 
 /* Media query per dispositivi con larghezza massima di 600px */
@@ -149,10 +165,12 @@ td{
 
   #container {
     padding: 10px;
+	width: 100%;
+    max-width: 100%;
   }
 
   .tab {
-	margin-top:20px;
+    margin-top: 20px;
     margin-right: 0;
     width: 100%;
   }
@@ -160,13 +178,242 @@ td{
   .tab table {
     margin-right: 0;
   }
-}
 
-#header {
-  text-align: center;
+  #cont {
+    margin-top: 20px;
+  }
 }
 
 p {
   font-size: 24px;
   color: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.containers {
+  max-width: 1050px;
+  width: 90%;
+  margin: auto;
+}
+
+.navbar {
+  width: 100%;
+  box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 62px;
+}
+
+.navbar .menu-items {
+  display: flex;
+}
+
+.navbar .nav-container li {
+  list-style: none;
+}
+
+.navbar .nav-container a {
+  text-decoration: none;
+  color: #0e2431;
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding: 0.7rem;
+  cursor: pointer;
+}
+
+.navbar .nav-container a:hover {
+  font-weight: bolder;
+}
+
+.nav-container {
+  display: block;
+  position: relative;
+  height: 60px;
+}
+
+.nav-container .checkbox {
+  position: absolute;
+  display: block;
+  height: 32px;
+  width: 32px;
+  top: 20px;
+  left: 20px;
+  z-index: 5;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.nav-container .hamburger-lines {
+  display: block;
+  height: 26px;
+  width: 32px;
+  position: absolute;
+  top: 17px;
+  left: 20px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav-container .hamburger-lines .line {
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+  background: #0e2431;
+}
+
+.nav-container .hamburger-lines .line1 {
+  transform-origin: 0% 0%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line2 {
+  transition: transform 0.2s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line3 {
+  transform-origin: 0% 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.navbar .menu-items {
+  padding-top: 120px;
+  box-shadow: inset 0 0 2000px rgba(255, 255, 255, 1);
+  height: 100vh;
+  width: 100%;
+  transform: translate(-150%);
+  display: flex;
+  flex-direction: column;
+  margin-left: -40px;
+  padding-left: 50px;
+  transition: transform 0.5s ease-in-out;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.navbar .menu-items li {
+  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.logo {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  font-size: 1.2rem;
+  color: #0e2431;
+}
+
+.nav-container input[type="checkbox"]:checked ~ .menu-items {
+  transform: translateX(0);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+  transform: rotate(45deg);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+  transform: scaleY(0);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+  transform: rotate(-45deg);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .logo {
+  display: none;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+}
+
+#popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    z-index: 1001;
+}
+
+.popup-content {
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.popup-content p {
+    font-size: 16px;
+    padding-top: 20px;
+    color: rgba(255, 255, 255, .6);
+}
+
+#header {
+	text-align: center;
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altezza a tutta schermo */
+}
+
+.slot-machine-container {
+    width: 200px; /* Dimensioni del container */
+    height: 200px;
+    border: 2px solid #3cb4ff; /* Colore del bordo */
+    border-radius: 50%; /* Rende il container rotondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px; /* Distanziamento dal pulsante */
+}
+
+.slot-machine {
+    margin: 0; /* Rimuove il margine del paragrafo */
+    font-size: 24px; /* Dimensione del testo */
+    color: #3cb4ff; /* Colore del testo */
+}
+
+#code {
+    width: 100px; /* Dimensioni del pulsante */
+    height: 100px;
+    border: none; /* Rimuove il bordo */
+    border-radius: 50%; /* Rende il pulsante rotondo */
+    background-color: #3cb4ff; /* Colore di sfondo */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Aggiunge un'ombra */
+    font-size: 24px; /* Dimensione del testo */
+    color: #fff; /* Colore del testo */
+    cursor: pointer; /* Cambia il cursore al passaggio */
+    transition: transform 0.2s, box-shadow 0.2s; /* Effetto di transizione */
+}
+
+#code:hover {
+    transform: translateY(2px); /* Effetto di alzamento */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Ombra più pronunciata */
 }

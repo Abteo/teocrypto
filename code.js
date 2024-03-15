@@ -55,4 +55,16 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     
   });
+  
+  document.getElementById("showPopup").addEventListener("click", function() {
+    document.getElementById("overlay").style.display = "block";
+    document.getElementById("popup").style.display = "block";
+});
+
+document.getElementById("overlay").addEventListener("click", function() {
+    document.getElementById("overlay").style.display = "none";
+    document.getElementById("popup").style.display = "none";
+});
+
+
 });
